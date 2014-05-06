@@ -19,4 +19,4 @@
 # limitations under the License.
 #
 
-default['java']['mac']['type'] = 'JDK'
+default['java-mac']['type'] = 'JDK'
