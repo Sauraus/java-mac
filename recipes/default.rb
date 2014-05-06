@@ -19,6 +19,8 @@
 # limitations under the License.
 #
 
+header = {'Cookie' => 'oraclelicense=accept-securebackup-cookie'}
+
 case node['java']['mac']['type']
   when 'JRE'
     dmg_package 'jre-7u55-macosx-x64' do
@@ -26,7 +28,7 @@ case node['java']['mac']['type']
       type 'pkg'
       source   'http://download.oracle.com/otn-pub/java/jdk/7u55-b13/jre-7u55-macosx-x64.dmg'
       checksum '9d938abdb8334cd7a2d604b2eb2b8415'
-      headers node['dmg']['remote_file']['headers']
+      headers   header
       accept_eula true
       action   :install
     end
@@ -36,7 +38,7 @@ case node['java']['mac']['type']
       type 'pkg'
       source   'http://download.oracle.com/otn-pub/java/jdk/7u55-b13/jdk-7u55-macosx-x64.dmg'
       checksum '2dc4ab3b5d264bb3658d769fee25117d'
-      headers node['dmg']['remote_file']['headers']
+      headers  header
       accept_eula true
       action   :install
     end

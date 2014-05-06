@@ -19,8 +19,4 @@
 # limitations under the License.
 #
 
-include_attribute ['dmg']
-
-default['dmg']['remote_file']['headers'] = {'Cookie' => 'oraclelicense=accept-securebackup-cookie'}
-
 default['java']['mac']['type'] = 'JDK'
