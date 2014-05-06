@@ -9,4 +9,3 @@ version          '1.0.0'
 recipe 'java-mac', 'Installs the JAVA SDK or JRE on Mac OS X'
 
 depends 'dmg'
-
