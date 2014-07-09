@@ -23,21 +23,21 @@ header = {'Cookie' => 'oraclelicense=accept-securebackup-cookie'}
 
 case node['java-mac']['type']
   when 'JRE'
-    dmg_package 'jre-7u55-macosx-x64' do
-      app 'Java 7 Update 55'
+    dmg_package 'jre-7u60-macosx-x64' do
+      app 'Java 7 Update 60'
       type 'pkg'
-      source   'http://download.oracle.com/otn-pub/java/jdk/7u55-b13/jre-7u55-macosx-x64.dmg'
-      checksum '9d938abdb8334cd7a2d604b2eb2b8415'
+      source   'http://download.oracle.com/otn-pub/java/jdk/7u60-b19/jre-7u60-macosx-x64.dmg'
+      checksum '526042a4eba12a7eb3f04237361b2300'
       headers  header
       accept_eula true
       action   :install
     end
   when 'JDK'
-    dmg_package 'jdk-7u55-macosx-x64' do
-      app 'JDK 7 Update 55'
+    dmg_package 'jdk-7u60-macosx-x64' do
+      app 'JDK 7 Update 60'
       type 'pkg'
-      source   'http://download.oracle.com/otn-pub/java/jdk/7u55-b13/jdk-7u55-macosx-x64.dmg'
-      checksum '2dc4ab3b5d264bb3658d769fee25117d'
+      source   'http://download.oracle.com/otn-pub/java/jdk/7u60-b19/jdk-7u60-macosx-x64.dmg'
+      checksum '2ec232fcec17c3c3fdffa09350e4aac7'
       headers  header
       accept_eula true
       action   :install
