@@ -46,3 +46,11 @@ case node['java-mac']['type']
     raise Chef::Exceptions::AttributeNotFound,
           ("The JAVA Mac OS X cookbook only supports JRE or JDK as the installation types")
 end
+
+# Set JAVA_HOME
+bash "Set JAVA_HOME" do
+  user "root"
+  code <<-EOH
+JAVA_HOME=$(/usr/libexec/java_home); (grep -q '^export JAVA_HOME' /etc/profile && sed -i '' 's#^export JAVA_HOME=.*#export JAVA_HOME='"$JAVA_HOME"'#' /etc/profile) || echo '\nexport JAVA_HOME='$JAVA_HOME >> /etc/profile
+  EOH
+end
