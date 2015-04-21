@@ -1,5 +1,8 @@
 # java-mac Cookbook Change Log
 
+##1.0.3
+* updated JAVA (JDK and JRE) version to 7u80
+
 ##1.0.2
 * Command to set JAVA_HOME in /etc/profile
 
