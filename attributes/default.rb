@@ -20,3 +20,4 @@
 #
 
 default['java-mac']['type'] = 'JDK'
+default['java-mac']['cookie'] = {'Cookie' => 'oraclelicense=accept-securebackup-cookie'}

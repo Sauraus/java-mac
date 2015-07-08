@@ -19,30 +19,33 @@
 # limitations under the License.
 #
 
-header = {'Cookie' => 'oraclelicense=accept-securebackup-cookie'}
-
 case node['java-mac']['type']
   when 'JRE'
     dmg_package 'jre-7u60-macosx-x64' do
       app 'Java 7 Update 60'
       type 'pkg'
-      source   'http://download.oracle.com/otn-pub/java/jdk/7u60-b19/jre-7u60-macosx-x64.dmg'
+      source 'http://download.oracle.com/otn-pub/java/jdk/7u60-b19/jre-7u60-macosx-x64.dmg'
       checksum '526042a4eba12a7eb3f04237361b2300'
-      headers  header
+      headers node['java-mac']['cookie']
       accept_eula true
-      action   :install
+      action :install
     end
   when 'JDK'
     dmg_package 'jdk-7u60-macosx-x64' do
       app 'JDK 7 Update 60'
       type 'pkg'
-      source   'http://download.oracle.com/otn-pub/java/jdk/7u60-b19/jdk-7u60-macosx-x64.dmg'
+      source 'http://download.oracle.com/otn-pub/java/jdk/7u60-b19/jdk-7u60-macosx-x64.dmg'
       checksum '2ec232fcec17c3c3fdffa09350e4aac7'
-      headers  header
+      headers node['java-mac']['cookie']
       accept_eula true
-      action   :install
+      action :install
     end
   else
     raise Chef::Exceptions::AttributeNotFound,
-          ("The JAVA Mac OS X cookbook only supports JRE or JDK as the installation types")
+          ("The java-mac cookbook only supports JRE or JDK as the installation types")
+end
+
+append_if_no_line "Adding JAVA_HOME to /etc/profile" do
+  path "/etc/profile"
+  line "export JAVA_HOME=$(/usr/libexec/java_home)"
 end

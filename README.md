@@ -1,25 +1,20 @@
 java-mac
 ===========
 
-Mac OS X JAVA cookbook
+OSX JAVA cookbook
 
 Requirements
 ============
 
 Chef 11
 
-NOTE
-===========
-
-The cookbook currently depends on a dmg cookbook by Sauraus that is ahead of the official Chef dmg cookbook.
-
 Authors
 ==================
 
-- Author:: Antek Baranski <antek.baranski@gmail.com>
+- Author:: Antek S. Baranski <antek.baranski@gmail.com>
 
 ```text
-Copyright 2014 Antek Baranski
+Copyright 2015 Antek Baranski
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
