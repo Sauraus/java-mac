@@ -21,21 +21,21 @@
 
 case node['java-mac']['type']
   when 'JRE'
-    dmg_package 'jre-7u60-macosx-x64' do
-      app 'Java 7 Update 60'
+    dmg_package 'jre-7u80-macosx-x64' do
+      app 'Java 7 Update 80'
       type 'pkg'
-      source 'http://download.oracle.com/otn-pub/java/jdk/7u60-b19/jre-7u60-macosx-x64.dmg'
-      checksum '526042a4eba12a7eb3f04237361b2300'
+      source 'http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jre-7u80-macosx-x64.dmg'
+      checksum '43a0019cf1a365a57f5c36799b35701308036495a159eeadf9a59d94a34704d0'
       headers node['java-mac']['cookie']
       accept_eula true
       action :install
     end
   when 'JDK'
-    dmg_package 'jdk-7u60-macosx-x64' do
-      app 'JDK 7 Update 60'
+    dmg_package 'jdk-7u80-macosx-x64' do
+      app 'JDK 7 Update 80'
       type 'pkg'
-      source 'http://download.oracle.com/otn-pub/java/jdk/7u60-b19/jdk-7u60-macosx-x64.dmg'
-      checksum '2ec232fcec17c3c3fdffa09350e4aac7'
+      source 'http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-macosx-x64.dmg'
+      checksum '2b9deef240a7f07d08541da01bbd60cbf93bf713efd5997e586ba23ec4f5089e'
       headers node['java-mac']['cookie']
       accept_eula true
       action :install
@@ -49,3 +49,4 @@ append_if_no_line "Adding JAVA_HOME to /etc/profile" do
   path "/etc/profile"
   line "export JAVA_HOME=$(/usr/libexec/java_home)"
 end
+
