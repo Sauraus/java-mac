@@ -8,5 +8,5 @@ version          '1.1.0'
 
 recipe 'java-mac', 'Installs the JAVA SDK or JRE on OSX'
 
-depends 'dmg'
-depends 'line'
+depends 'dmg', '~> 2.2'
+depends 'line', '~> 0.6.1'
