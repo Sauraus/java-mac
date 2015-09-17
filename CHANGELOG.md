@@ -1,5 +1,8 @@
 # java-mac Cookbook Change Log
 
+##1.0.1
+* Remove line cookbook version constraint
+
 ##1.1.0
 * Move cookie to node attribute
 * Update supermarket source
