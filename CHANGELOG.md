@@ -1,6 +1,10 @@
 # java-mac Cookbook Change Log
 
-##1.0.1
+##1.1.2
+* Remove dmg cookbook version constraint
+* Added kitchen test to install java
+
+##1.1.1
 * Remove line cookbook version constraint
 
 ##1.1.0

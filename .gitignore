@@ -15,3 +15,5 @@ bin/*
 
 #IDE
 .idea
+.kitchen/
+.kitchen.local.yml
