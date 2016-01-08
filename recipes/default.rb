@@ -21,7 +21,7 @@
 
 case node['java-mac']['type']
   when 'JRE'
-    dmg_package 'jre-7u80-macosx-x64' do
+    dmg_package 'jre-8u66-macosx-x64' do
       app 'Java 8 Update 66'
       type 'pkg'
       source 'http://download.oracle.com/otn-pub/java/jdk/8u66-b17/jre-8u66-macosx-x64.dmg'
@@ -31,7 +31,7 @@ case node['java-mac']['type']
       action :install
     end
   when 'JDK'
-    dmg_package 'jdk-7u80-macosx-x64' do
+    dmg_package 'jdk-8u66-macosx-x64' do
       app 'JDK 8 Update 66'
       type 'pkg'
       source 'http://download.oracle.com/otn-pub/java/jdk/8u66-b17/jdk-8u66-macosx-x64.dmg'
